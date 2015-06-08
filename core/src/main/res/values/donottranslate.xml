@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="shared_user_id" translatable="false">com.jana.android</string>
+    <string name="shared_user_lable" translatable="false">com.jana.android</string>
+
+    <!-- Preferences Ids -->
+    <string name="pref_init_time" translatable="false">pref_init_time</string>
+    <string name="pref_device_id" translatable="false">pref_device_id</string>
+    <string name="pref_locale" translatable="false">pref_locale</string>
+
+</resources>
