@@ -71,7 +71,6 @@ public class DeviceInfo {
     public static String getMACAddress(String interfaceName) {
 
         try {
-
             List<NetworkInterface> interfaces = Collections
                     .list(NetworkInterface.getNetworkInterfaces());
 
@@ -92,8 +91,8 @@ public class DeviceInfo {
 
                 StringBuilder buf = new StringBuilder();
 
-                for (int idx = 0; idx < mac.length; idx++) {
-                    buf.append(String.format("%02X:", mac[idx]));
+                for (byte item : mac) {
+                    buf.append(String.format("%02X:", item));
                 }
 
                 if (buf.length() > 0) {
@@ -103,8 +102,8 @@ public class DeviceInfo {
                 return buf.toString();
             }
         } catch (Exception ex) {
-        } // for now eat exceptions
-
+            return "";
+        }
         return "";
     }
 
@@ -121,9 +120,7 @@ public class DeviceInfo {
 
         PackageInfo info = getPackageInfo(context);
 
-        String version = info.versionName;
-
-        return version;
+        return info.versionName;
     }
 
     public static int getPackageVersionCode(final Context context)

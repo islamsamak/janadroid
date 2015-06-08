@@ -28,6 +28,6 @@ public interface IManager {
 
     void clearStorageCache();
 
-    void destory();
+    void destroy();
 
 }

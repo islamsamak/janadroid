@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jana.android.core"
     android:sharedUserId="@string/shared_user_id"
-    android:sharedUserLabel="@string/shared_user_lable"
+    android:sharedUserLabel="@string/shared_user_label"
     android:versionCode="1"
     android:versionName="1.0.0">
 

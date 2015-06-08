@@ -60,9 +60,8 @@ public abstract class AbstractSettings {
     /*-------- HELPER METHODS --------*/
     private SharedPreferences getSharedPreferences() {
 
-        SharedPreferences prefs = AbstractApplication.getApplication()
+        return AbstractApplication.getApplication()
                 .getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
-        return prefs;
     }
 
     public boolean contains(int id) {
@@ -76,9 +75,7 @@ public abstract class AbstractSettings {
 
         SharedPreferences prefs = getSharedPreferences();
 
-        boolean found = prefs.contains(key);
-
-        return found;
+        return prefs.contains(key);
     }
 
     public SharedPreferences.Editor remove(int id) {
@@ -94,7 +91,7 @@ public abstract class AbstractSettings {
 
         editor.remove(key);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -105,7 +102,7 @@ public abstract class AbstractSettings {
 
         editor.putBoolean(key, value);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -123,7 +120,7 @@ public abstract class AbstractSettings {
 
         editor.putInt(key, value);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -141,7 +138,7 @@ public abstract class AbstractSettings {
 
         editor.putFloat(key, value);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -159,7 +156,7 @@ public abstract class AbstractSettings {
 
         editor.putLong(key, value);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -177,7 +174,7 @@ public abstract class AbstractSettings {
 
         editor.putString(key, value);
 
-        editor.commit();
+        editor.apply();
 
         return editor;
     }
@@ -190,10 +187,7 @@ public abstract class AbstractSettings {
     }
 
     public boolean getBoolean(String key, boolean defValue) {
-
-        boolean value = getSharedPreferences().getBoolean(key, defValue);
-
-        return value;
+        return getSharedPreferences().getBoolean(key, defValue);
     }
 
     public boolean getBoolean(int id, boolean defValue) {
@@ -204,10 +198,7 @@ public abstract class AbstractSettings {
     }
 
     public int getInt(String key, int defValue) {
-
-        int value = getSharedPreferences().getInt(key, defValue);
-
-        return value;
+        return getSharedPreferences().getInt(key, defValue);
     }
 
     public int getInt(int id, int defValue) {
@@ -218,10 +209,7 @@ public abstract class AbstractSettings {
     }
 
     public float getFloat(String key, float defValue) {
-
-        float value = getSharedPreferences().getFloat(key, defValue);
-
-        return value;
+        return getSharedPreferences().getFloat(key, defValue);
     }
 
     public float getFloat(int id, float defValue) {
@@ -232,10 +220,7 @@ public abstract class AbstractSettings {
     }
 
     public long getLong(String key, long defValue) {
-
-        long value = getSharedPreferences().getLong(key, defValue);
-
-        return value;
+        return getSharedPreferences().getLong(key, defValue);
     }
 
     public long getLong(int id, long defValue) {
@@ -246,10 +231,7 @@ public abstract class AbstractSettings {
     }
 
     public String getString(String key, String defValue) {
-
-        String value = getSharedPreferences().getString(key, defValue);
-
-        return value;
+        return getSharedPreferences().getString(key, defValue);
     }
 
     public String getString(int id, String defValue) {
@@ -260,8 +242,7 @@ public abstract class AbstractSettings {
     }
 
     public long getInitTime() {
-        long value = getLong(R.string.pref_init_time, new Date().getTime());
-        return value;
+        return getLong(R.string.pref_init_time, new Date().getTime());
     }
 
     public void setInitTime(long initTime) {
@@ -269,9 +250,8 @@ public abstract class AbstractSettings {
     }
 
     public String getLocale() {
-        String value = getString(R.string.pref_locale, Locale.getDefault()
+        return getString(R.string.pref_locale, Locale.getDefault()
                 .getLanguage());
-        return value;
     }
 
     public void setLocale(String locale) {
@@ -291,9 +271,8 @@ public abstract class AbstractSettings {
     }
 
     public String getDeviceId() {
-        String value = getString(R.string.pref_device_id,
+        return getString(R.string.pref_device_id,
                 DeviceInfo.getUniqueId());
-        return value;
     }
 
     private void setDeviceId(String id) {

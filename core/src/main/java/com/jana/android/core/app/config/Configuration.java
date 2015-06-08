@@ -16,6 +16,8 @@
 
 package com.jana.android.core.app.config;
 
+import android.support.annotation.NonNull;
+
 import java.util.concurrent.ThreadFactory;
 
 /**
@@ -59,7 +61,7 @@ public final class Configuration {
         displayThreadFactory = new ThreadFactory() {
 
             @Override
-            public Thread newThread(Runnable r) {
+            public Thread newThread(@NonNull Runnable r) {
 
                 Thread t = new Thread(r);
 
@@ -114,10 +116,7 @@ public final class Configuration {
         }
 
         public Configuration build() {
-
-            Configuration configs = new Configuration(this);
-
-            return configs;
+            return new Configuration(this);
         }
 
     }

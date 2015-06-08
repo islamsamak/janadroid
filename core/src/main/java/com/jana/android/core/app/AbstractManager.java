@@ -71,7 +71,7 @@ public abstract class AbstractManager implements IManager,
     }
 
     @Override
-    public void destory() {
+    public void destroy() {
     }
 
     @Override
