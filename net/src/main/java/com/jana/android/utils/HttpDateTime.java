@@ -70,9 +70,7 @@ public final class HttpDateTime {
     private static final Pattern HTTP_DATE_ANSIC_PATTERN =
             Pattern.compile(HTTP_DATE_ANSIC_REGEXP);
 
-    blic
-
-    static long parse(String timeString)
+    public static long parse(String timeString)
             throws IllegalArgumentException {
 
         int date = 1;
@@ -193,23 +191,7 @@ public final class HttpDateTime {
         }
     }
 
-    priv
-
-    private static class TimeOfDay {
-        int hour;
-        int minute;
-        int second;
-
-        TimeOfDay(int h, int m, int s) {
-            this.hour = h;
-            this.minute = m;
-            this.second = s;
-        }
-    }
-
-    puate
-
-    static TimeOfDay getTime(String timeString) {
+    private static TimeOfDay getTime(String timeString) {
         // HH might be H
         int i = 0;
         int hour = timeString.charAt(i++) - '0';
@@ -227,5 +209,16 @@ public final class HttpDateTime {
                 + (timeString.charAt(i++) - '0');
 
         return new TimeOfDay(hour, minute, second);
+    }
+
+    private static class TimeOfDay {
+        int hour;
+        int minute;
+        int second;
+        TimeOfDay(int h, int m, int s) {
+            this.hour = h;
+            this.minute = m;
+            this.second = s;
+        }
     }
 }

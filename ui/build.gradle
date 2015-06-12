@@ -18,6 +18,8 @@ android {
     }
 }
 
+project.archivesBaseName = "janadroid-ui";
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':core')
