@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_holder" type="id" />
+    <item name="tag_layout_id" type="id" />
+    <item name="tag_tab_type" type="id" />
+
+</resources>
