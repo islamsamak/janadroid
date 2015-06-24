@@ -69,8 +69,8 @@ public class MapInfoWindowAdapter implements InfoWindowAdapter {
         mImageLoader.init(configs);
 
         mOptions = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(R.drawable.ic_launcher)
-                .showImageOnFail(R.drawable.ic_launcher)
+                .showImageForEmptyUri(R.mipmap.ic_launcher)
+                .showImageOnFail(R.mipmap.ic_launcher)
                 .resetViewBeforeLoading(true).cacheOnDisc(true)
                 .cacheInMemory(true)
                 .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
@@ -109,7 +109,7 @@ public class MapInfoWindowAdapter implements InfoWindowAdapter {
             UrlImageView thumbnail = (UrlImageView) popup
                     .findViewById(R.id.img_thumbnail);
 
-            thumbnail.setImageResource(R.drawable.ic_launcher);
+            thumbnail.setImageResource(R.mipmap.ic_launcher);
 
             if (mCallback != null) {
 

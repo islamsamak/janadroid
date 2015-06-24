@@ -114,8 +114,8 @@ public abstract class AbstractMapFragment<T extends MapModel> extends
         mImageLoader.init(mConfigs);
 
         mOptions = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(R.drawable.ic_launcher)
-                .showImageOnFail(R.drawable.ic_launcher)
+                .showImageForEmptyUri(R.mipmap.ic_launcher)
+                .showImageOnFail(R.mipmap.ic_launcher)
                 .resetViewBeforeLoading(true).cacheOnDisc(true)
                 .cacheInMemory(true)
                 .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
@@ -163,9 +163,6 @@ public abstract class AbstractMapFragment<T extends MapModel> extends
         showMap();
     }
 
-    /**
-     * @param savedInstanceState
-     */
     protected void showMap() {
         showProgress();
 
@@ -373,7 +370,7 @@ public abstract class AbstractMapFragment<T extends MapModel> extends
 
         } else {
 
-            imageView.setImageResource(R.drawable.ic_launcher);
+            imageView.setImageResource(R.mipmap.ic_launcher);
         }
 
         mMarkerViewMap.put(marker, imageView);

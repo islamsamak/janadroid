@@ -25,6 +25,7 @@ dependencies {
     compile project(':core')
     compile project(':net')
     compile 'com.android.support:appcompat-v7:22.1.1'
+//    compile 'com.android.support:recyclerview-v7:21.1.1'
     compile 'com.google.android.gms:play-services:7.3.0'
     compile files('libs/android-support-v7-recyclerview.jar')
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'

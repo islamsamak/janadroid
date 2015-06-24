@@ -70,8 +70,8 @@ public class ImagePagerAdapter<T extends Image> extends PagerAdapter implements
         mImageLoader = imageLoader;
 
         mOptions = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(R.drawable.ic_launcher)
-                .showImageOnFail(R.drawable.ic_launcher)
+                .showImageForEmptyUri(R.mipmap.ic_launcher)
+                .showImageOnFail(R.mipmap.ic_launcher)
                 .resetViewBeforeLoading(true).cacheOnDisc(true)
                 .cacheInMemory(true).imageScaleType(ImageScaleType.EXACTLY)
                 .bitmapConfig(Bitmap.Config.RGB_565).considerExifParams(true)
