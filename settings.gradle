@@ -1,1 +1,1 @@
-include ':core', ':content', ':io', ':location', ':net', ':sensor', ':ui', ':utils', ':ext-slidingmenu'
+include ':core', ':content', ':io', ':location', ':net', ':sensor', ':ui', ':utils', ':ext-slidingmenu', ':apk-expansion'

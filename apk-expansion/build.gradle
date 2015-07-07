@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -18,17 +18,9 @@ android {
     }
 }
 
-project.archivesBaseName = "janadroid-ui";
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':core')
-    compile project(':net')
-    compile 'com.android.support:appcompat-v7:22.1.1'
-//    compile 'com.android.support:recyclerview-v7:21.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.google.android.gms:play-services:7.5.0'
-    compile files('libs/android-support-v7-recyclerview.jar')
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
-    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
-    compile project(':ext-slidingmenu')
+    compile project(':core')
 }
